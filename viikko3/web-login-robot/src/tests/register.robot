@@ -27,15 +27,40 @@ Register With Valid Username And Too Short Password
     Page Should Contain  Error, password is less than 8 characters
 
 Register With Nonmatching Password And Password Confirmation
-     Set Username  kallecee
-     Set Password  kalle123
-     Set Password Confirmation  kalle223
-     Register Credentials
-     Page Should Contain  Error, passwords do not match
+    Set Username  kallecee
+    Set Password  kalle123
+    Set Password Confirmation  kalle223
+    Register Credentials
+    Page Should Contain  Error, passwords do not match
+
+Login After Successful Registration
+    Set Username  kalledee
+    Set Password  kalle123
+    Set Password Confirmation  kalle123
+    Register Credentials
+    Go To Login Page
+    Set Username  kalle
+    Set Password  kalle123
+    Submit Credentials
+    Main Page Should Be Open
+
+Login After Failed Registration
+    Set Username  kallefff
+    Set Password  kalle123
+    Set Password Confirmation  kalle223
+    Register Credentials
+    Go To Login Page
+    Set Username  kallefff
+    Set Password  kalle123
+    Submit Credentials
+    Page Should Contain  Invalid username or password
 
 *** Keywords ***
 Register Credentials
     Click Button  Register
+
+Submit Credentials
+    Click Button  Login
 
 Register Should Succeed
     Welcome Page Should Be Open
