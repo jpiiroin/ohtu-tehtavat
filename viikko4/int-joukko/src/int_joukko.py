@@ -4,48 +4,42 @@ OLETUSKASVATUS = 5
 
 class IntJoukko:
     def __init__(self, kapasiteetti=None, kasvatuskoko=None):
+        
         if kapasiteetti is None:
             self.kapasiteetti = KAPASITEETTI
-        elif not isinstance(kapasiteetti, int) or kapasiteetti < 0:
-            raise Exception("Väärä kapasiteetti")  # heitin vaan jotain :D
         else:
+            if not isinstance(kapasiteetti, int) or kapasiteetti < 0:
+                raise Exception("Väärä kapasiteetti")
             self.kapasiteetti = kapasiteetti
-
+        
         if kasvatuskoko is None:
             self.kasvatuskoko = OLETUSKASVATUS
-        elif not isinstance(kapasiteetti, int) or kapasiteetti < 0:
-            raise Exception("kapasiteetti2")  # heitin vaan jotain :D
         else:
             self.kasvatuskoko = kasvatuskoko
-
         self.ljono = [0] * self.kapasiteetti
-
         self.alkioiden_lkm = 0
 
-    def kuuluu(self, n):
+    def kuuluu(self, luku):
         on = 0
 
         for i in range(0, self.alkioiden_lkm):
-            if n == self.ljono[i]:
+            if luku == self.ljono[i]:
                 on = on + 1
 
-        if on > 0:
-            return True
-        else:
-            return False
+        return on > 0
 
-    def lisaa(self, n):
+    def lisaa(self, luku):
         ei_ole = 0
 
         if self.alkioiden_lkm == 0:
-            self.ljono[0] = n
+            self.ljono[0] = luku
             self.alkioiden_lkm = self.alkioiden_lkm + 1
             return True
         else:
             pass
 
-        if not self.kuuluu(n):
-            self.ljono[self.alkioiden_lkm] = n
+        if not self.kuuluu(luku):
+            self.ljono[self.alkioiden_lkm] = luku
             self.alkioiden_lkm = self.alkioiden_lkm + 1
 
             if self.alkioiden_lkm % len(self.ljono) == 0:
@@ -58,12 +52,12 @@ class IntJoukko:
 
         return False
 
-    def poista(self, n):
+    def poista(self, luku):
         kohta = -1
         apu = 0
 
         for i in range(0, self.alkioiden_lkm):
-            if n == self.ljono[i]:
+            if luku == self.ljono[i]:
                 kohta = i  # siis luku löytyy tuosta kohdasta :D
                 self.ljono[kohta] = 0
                 break
@@ -83,7 +77,7 @@ class IntJoukko:
         for i in range(0, len(a)):
             b[i] = a[i]
 
-    def mahtavuus(self):
+    def koko(self):
         return self.alkioiden_lkm
 
     def to_int_list(self):
