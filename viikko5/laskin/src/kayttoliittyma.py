@@ -56,7 +56,6 @@ class Kayttoliittyma:
 
     def _suorita_komento(self, komento):
         arvo = 0
-
         try:
             arvo = int(self._syote_kentta.get())
         except Exception:
