@@ -1,3 +1,4 @@
+
 class Summa:
     def __init__(self, io, luku):
         self.io = io

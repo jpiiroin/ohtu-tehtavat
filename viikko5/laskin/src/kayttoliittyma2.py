@@ -18,16 +18,18 @@ class Kayttoliittyma:
         self._komennot = {
             Komento.SUMMA: Summa(self._sovellus, Kayttoliittyma.kentta)
         }
-        
+        print("kentta1", Kayttoliittyma.kentta)
     def kaynnista(self):
+        print("kentta2", Kayttoliittyma.kentta)
         self._tulos_var = StringVar()
         self._tulos_var.set(self._sovellus.tulos)
         tulos_teksti = ttk.Label(textvariable=self._tulos_var)
-
+        
         summa_painike = ttk.Button(
             master=self._root,
             text="Summa",
             command=lambda: self._suorita_komento(Komento.SUMMA)
+            
         )
 
         erotus_painike = ttk.Button(
@@ -63,7 +65,9 @@ class Kayttoliittyma:
             arvo = int(self._syote_kentta.get())
         except Exception:
             pass
+        print("kentta3", Kayttoliittyma.kentta)
         return arvo
+        
 
     def _suorita_komento(self, komento):
         komento_olio = self._komennot[komento]
@@ -71,8 +75,9 @@ class Kayttoliittyma:
         arvo = self._lue_syote()
         print("arvo", arvo)
 
+        #miksei tämä päivity?
         Kayttoliittyma.kentta = arvo
-        
+        print("kentta4", Kayttoliittyma.kentta)
 
         self._kumoa_painike["state"] = constants.NORMAL
 
@@ -83,6 +88,7 @@ class Kayttoliittyma:
 
         self._syote_kentta.delete(0, constants.END)
         self._tulos_var.set(self._sovellus.tulos)
+        print("kentta5", Kayttoliittyma.kentta)
         
     """ def _suorita_komento(self, komento):
         arvo = 0
