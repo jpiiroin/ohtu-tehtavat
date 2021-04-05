@@ -1,0 +1,20 @@
+Scrumban-menetelmän käyttö ketterässä ohjelmistokehityksessä (Kalle Ilves)
+Scrum ja Kanban ovat molemmat iteratiivisia ohjelmistokehityksen prosessimenetelmiä. Scrumissa painottuu etukäteen sovittu aikarajoitus
+(sprintti) ja sitoutuminen tavoitteeseen, kun taas kanbanissa tehtäviä ei ole sidottu tiettyyn aikarajaan oletusarvoisesti. Scrumin sprintin
+sisältö on myös etukäteen päätetty, kun taas kanbanissa voi tehtäviä lisätä jatkuvasti kunhan kanban-taulun jono ei kasva liikaa. Scrumissa yksi
+kehitysryhmä on sitoutunut yhteen sprintin tavoitteeseen, kun taas kanbanissa samaa kanban-taulua voi tehdä useampi kehitysryhmä. Sprintin jäljellä olevaa
+työmäärää seurataan scrumissa tarkasti, kun taas kanbanissa ei oletusarvoisesti seurata. 
+
+Scrumban on kehitetty saamaan vaikutteita sekä scrumista että kanbanista, ottaen molemmista prosessimalleista niiden tarpeelliset osat ja
+jättämään pois turhat. Scrumbanissa on töiden seuraamisen etenemistä varten kanban-taulu, johon mahtuu tietty määrä tehtäviä kerrallaan. Työmääriä ei arvioida
+yhtä tarkasti kuin scrumissa. Scrumban ei käytä iteraatioita, vaan työnkulku etenee jatkuvan suunnittelun ja muutoksiin reagoinnin kautta. Prosessiin voi
+ja pitäisi sisältyä suunnittelu- ja priorisointipalaverit. Päivittäistapaamiset ja niiden jälkeen suoritettavat keskustelut (spin-off meeting)
+jotka paneutuvat joihinkin tiettyihin aiheisiin halukkaille kuuluvat myös scrumbaniin. Scrumbanissa pitkäaikaisia tavoitteita hallitaan jakamalla
+suunnitelmat esim. ämpäreihin (bucket) tai joiksikin muiksi kutsuttaviin isompiin kokonaisuuksiin. Esim. yhden vuoden tavoitteet, kuuden kuukauden
+tavoitteet, vuosineljänneksen tavoitteet jne. Mitä pienempiin tavoitteisiin mennään, sitä tarkemmin ne ovat määritelty. Lopulta mennään käyttäjä-
+tarinoiden tasolle ja siitä vielä taskitasoille, jotka sisältävät esim. featuren ja sen sisältämät alitehtävät, esim. käyttöliittymäsuunnittelu, 
+koodaus, unit-testit, end-to-end -testaus, julkaisu, dokumentointi.
+
+Jokainen projekti on hiukan erilainen, joten myös niissä käytettävä prosessi, miksi sitä sitten kutsutaan, on yksilöllinen. Joissain tapauksissa
+voi scrum olla parempi kuin kanban tai scrumban ja toisinpäin. Optimaalinen prosessi kulloisellekin tiimille ja projektille löytyy kokeilemalla.
+
