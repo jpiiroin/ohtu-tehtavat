@@ -56,11 +56,11 @@ class Kayttoliittyma:
 
     def _suorita_komento(self, komento):
         arvo = 0
+
         try:
             arvo = int(self._syote_kentta.get())
         except Exception:
             pass
-        print(arvo)
 
         if komento == Komento.SUMMA:
             self._sovellus.plus(arvo)

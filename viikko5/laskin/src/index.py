@@ -1,7 +1,6 @@
 from tkinter import Tk
-from kayttoliittyma2 import Kayttoliittyma
+from kayttoliittyma import Kayttoliittyma
 from sovelluslogiikka import Sovelluslogiikka
-from summa import Summa
 
 
 def main():
