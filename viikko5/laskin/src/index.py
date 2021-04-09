@@ -1,5 +1,5 @@
 from tkinter import Tk
-from kayttoliittyma import Kayttoliittyma
+from kayttoliittyma2 import Kayttoliittyma
 from sovelluslogiikka import Sovelluslogiikka
 
 
